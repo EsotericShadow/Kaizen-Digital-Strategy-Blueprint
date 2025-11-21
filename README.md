@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kaizen Digital Strategy Blueprint
+
+A Next.js documentation site showcasing the complete Kaizen Strategic AI digital strategy services documentation.
+
+## Overview
+
+This is a comprehensive documentation site built with Next.js 16, featuring all 8 process documents with visual flow charts using Mermaid.js. The site serves as the master reference for service delivery, ensuring consistency, quality, and continuous improvement across all client engagements.
+
+## Features
+
+- ✅ **8 Complete Document Pages** - All process documents converted from HTML
+- ✅ **Interactive Flow Charts** - Mermaid.js diagrams for visual process flows
+- ✅ **Professional Styling** - Kaizen brand colors and clean design
+- ✅ **Responsive Design** - Works seamlessly on desktop and mobile
+- ✅ **ISO-Compliant Structure** - Document control, scope, and records sections
+- ✅ **Fast Performance** - Next.js static site generation
+
+## Documents
+
+1. **Blueprint Overview** - Main documentation and navigation
+2. **Branding Strategy** - Complete branding process with flow charts
+3. **Graphic/Logo Design** - Design process documentation
+4. **Website Development** - Full development process
+5. **Web App/Mobile App** - Application development process
+6. **Social Media** - Ongoing strategy process
+7. **AI/Automation** - Process flow with ISO 42001 compliance
+8. **Process Optimization** - Optimization workflow
+
+## Technology Stack
+
+- **Framework**: Next.js 16.0.3 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + Custom CSS
+- **Diagrams**: Mermaid.js
+- **HTML Parsing**: html-react-parser
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18 or later
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+### Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+kaizen-docs/
+├── src/
+│   ├── app/              # Next.js App Router pages
+│   │   ├── page.tsx      # Home page with navigation
+│   │   └── [doc-name]/   # Individual document pages
+│   ├── components/       # React components
+│   │   └── Mermaid.tsx   # Mermaid diagram component
+│   └── globals.css       # Global styles
+├── public/               # Static assets
+└── package.json          # Dependencies
+```
 
-## Deploy on Vercel
+## Documentation Standards
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All documents follow ISO 9001:2015 Quality Management Systems standards, with AI/Automation processes also adhering to ISO 42001:2023 AI Management Systems requirements.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+Copyright © 2025 Kaizen Strategic AI
+
+## Support
+
+For questions or issues, please contact the project owner.
