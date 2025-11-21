@@ -2,7 +2,10 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1E1E1E;
+  --brand-red: #D62828;
+  --brand-gray-light: #F5F5F5;
+  --brand-gray-medium: #C9C9C9;
 }
 
 @theme inline {
@@ -12,15 +15,236 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Document styles */
+.document-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.7;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #fff;
+  color: #1E1E1E;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.document-container h1 {
+  color: #D62828;
+  border-bottom: 3px solid #D62828;
+  padding-bottom: 15px;
+  margin-top: 0;
+}
+
+.document-container h2 {
+  color: #1E1E1E;
+  margin-top: 40px;
+  border-bottom: 2px solid #C9C9C9;
+  padding-bottom: 8px;
+}
+
+.document-container h3 {
+  color: #1E1E1E;
+  margin-top: 30px;
+}
+
+.document-container h4 {
+  color: #1E1E1E;
+  margin-top: 25px;
+}
+
+.document-container code {
+  background: #F5F5F5;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.document-container pre {
+  background: #F5F5F5;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  border-left: 4px solid #D62828;
+}
+
+.document-container pre code {
+  background: none;
+  padding: 0;
+}
+
+.document-container table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.document-container th,
+.document-container td {
+  border: 1px solid #C9C9C9;
+  padding: 12px;
+  text-align: left;
+}
+
+.document-container th {
+  background: #F5F5F5;
+  font-weight: bold;
+}
+
+.document-container ul,
+.document-container ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+.document-container li {
+  margin: 8px 0;
+}
+
+.document-container p {
+  margin: 15px 0;
+}
+
+.document-container strong {
+  color: #1E1E1E;
+  font-weight: 600;
+}
+
+.document-container hr {
+  border: none;
+  border-top: 2px solid #C9C9C9;
+  margin: 30px 0;
+}
+
+.document-container a {
+  color: #D62828;
+  text-decoration: none;
+}
+
+.document-container a:hover {
+  text-decoration: underline;
+}
+
+.document-container .document-control {
+  background: #F5F5F5;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 25px 0;
+  font-size: 0.95em;
+}
+
+.document-container .process-overview {
+  background: #F5F5F5;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 25px 0;
+}
+
+.document-container .deliverables {
+  background: #E8F5E9;
+  padding: 15px;
+  border-left: 4px solid #4CAF50;
+  margin: 15px 0;
+  border-radius: 3px;
+}
+
+.document-container .quality-checkpoint {
+  background: #FFF3E0;
+  padding: 15px;
+  border-left: 4px solid #FF9800;
+  margin: 15px 0;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.document-container input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+.document-container blockquote {
+  border-left: 4px solid #D62828;
+  padding-left: 20px;
+  margin: 20px 0;
+  color: #666;
+  font-style: italic;
+}
+
+.document-container .mermaid {
+  background: white;
+  border: 2px solid #C9C9C9;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 30px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  min-height: 200px;
+}
+
+/* Navigation styles */
+.nav-link {
+  color: #D62828;
+  text-decoration: none;
+  display: block;
+  padding: 8px 0;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-list ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+/* Home page styles */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.home-container h1 {
+  color: #D62828;
+  border-bottom: 3px solid #D62828;
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.doc-card {
+  border: 2px solid #C9C9C9;
+  border-radius: 8px;
+  padding: 24px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.doc-card:hover {
+  border-color: #D62828;
+  box-shadow: 0 4px 12px rgba(214, 40, 40, 0.1);
+  transform: translateY(-2px);
+}
+
+.doc-card h2 {
+  color: #D62828;
+  margin-top: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.doc-card a {
+  color: #D62828;
+  text-decoration: none;
+  font-weight: 600;
 }
