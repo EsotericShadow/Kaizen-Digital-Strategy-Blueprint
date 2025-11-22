@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Kaizen Digital Strategy Blueprint",
   description: "Complete documentation for Kaizen Strategic AI's digital strategy services",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
