@@ -16,26 +16,36 @@ export default function Mermaid({ chart, id }: MermaidProps) {
   useEffect(() => {
     if (!ref.current || !chart) return;
 
-    // Initialize Mermaid once
-    mermaid.initialize({
-      startOnLoad: false,
-      theme: 'default',
-      themeVariables: {
-        primaryColor: '#F5F5F5',
-        primaryTextColor: '#1E1E1E',
-        primaryBorderColor: '#D62828',
-        lineColor: '#1E1E1E',
-        secondaryColor: '#C9C9C9',
-        tertiaryColor: '#F5F5F5',
-        noteBkgColor: '#F5F5F5',
-        noteTextColor: '#1E1E1E'
-      },
-      flowchart: {
-        useMaxWidth: true,
-        htmlLabels: true,
-        curve: 'basis'
+    // Initialize Mermaid once (only initialize if not already initialized)
+    if (typeof window !== 'undefined' && typeof mermaid !== 'undefined') {
+      try {
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'default',
+          themeVariables: {
+            primaryColor: '#F5F5F5',
+            primaryTextColor: '#1E1E1E',
+            primaryBorderColor: '#D62828',
+            lineColor: '#1E1E1E',
+            secondaryColor: '#C9C9C9',
+            tertiaryColor: '#F5F5F5',
+            noteBkgColor: '#F5F5F5',
+            noteTextColor: '#1E1E1E'
+          },
+          flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true,
+            curve: 'basis'
+          }
+        });
+      } catch (err) {
+        console.error('Failed to initialize Mermaid:', err);
+        return;
       }
-    });
+    } else {
+      console.error('Mermaid is not available');
+      return;
+    }
 
     // Clear previous content
     const currentElement = ref.current;
